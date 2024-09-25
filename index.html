@@ -35,12 +35,11 @@
     };
   </script>
 </head>
-
-<body class="font-Lexend">
-  <main class="fixed w-full">
-    <div class="bg-[#e2e1d6] h-32 pt-[24px]">
-      <nav class="max-w-[520px] sm:max-w-[1000px] m-auto ">
-        <div class="navbar bg-base-100 bg-[#e2e1d6]">
+<body class="font-Lexend ">
+  <main class="fixed w-full  backdrop-blur-lg bg-opacity-30">
+    <div class="bg-[#f9f7f3] h-32 pt-[24px]">
+      <nav class="max-w-[450px] sm:max-w-[1000px] m-auto ">
+        <div class="navbar bg-base-100 bg-[#f9f7f3]" >
           <div class="navbar-start">
             <button class=" text-lg font-bold btn bg-common_color w-24" onclick="window.location.href='faq.html';">Blog</button>
           </div>
@@ -89,9 +88,9 @@
     <div id="donationSection" class="space-y-4 mt-52">
       <!-- Donation Card 1 -->
       <div class="bg-white shadow-md rounded-lg  sm:flex gap-4 p-6 border-solid border-2 border-slate-200">
-        <img src="assets/noakhali.png" class="rounded-md object-fill sm:h-72 sm:w-8/12" alt="">
+        <img src="assets/noakhali.png" class="rounded-md object-contain h-auto sm:w-8/12" alt="">
         <div class="mt-6 sm:mt-0">
-          <div class="flex mb-3">
+          <div class="flex bg-[#f3f3f3] p-2 w-32 mb-3 rounded-lg">
             <img src="assets/coin.png" alt="">
             <p class="text-gray-800 text-xl ml-1"> <span id="total1">120</span> BDT</p>
           </div>
@@ -113,9 +112,9 @@
       <div class="bg-white shadow-md rounded-lg  sm:flex gap-4 p-6 border-solid border-2 border-slate-200">
         <img src="assets/feni.png" class="rounded-md sm:w-96 object-cover" alt="">
         <div class="mt-6 sm:mt-0">
-          <div class="flex mb-4">
+          <div class="flex mb-3 bg-[#f3f3f3] p-2 w-32  rounded-lg">
             <img src="assets/coin.png" alt="">
-            <p class="text-gray-800 text-xl ml-1"> <span id="total2">500</span> BDT</p>
+            <p class="text-gray-800 text-xl ml-1"> <span id="total2">50</span> BDT</p>
           </div>
 
           <h2 class="text-xl font-semibold mb-4">Donate for Flood Relief in Feni,Bangladesh</h2>
@@ -136,7 +135,7 @@
       <div class="bg-white shadow-md rounded-lg  sm:flex gap-4 p-6 border-solid border-2 border-slate-200">
         <img src="assets/quota-protest.png" class="rounded-md  sm:w-96 object-cover" alt="">
         <div class="mt-6 sm:mt-0">
-          <div class="flex mb-3">
+          <div class="flex mb-3 bg-[#f3f3f3] p-2 w-32  rounded-lg">
             <img src="assets/coin.png" alt="">
             <p class="text-gray-800 text-xl ml-1"> <span id="total3">650</span> BDT</p>
           </div>
@@ -174,9 +173,14 @@
       </div>
     </div>
   </div>
+  <footer class="bg-[#f9f7f3] h-32 pt-[24px]">
+
+  </footer>
   <!-- <script src="currentBalance.js"></script> -->
   <script src="forBtn.js"></script>
   <script>
+    const navbar = document.getElementById('navbar');
+// Add scroll event listener
     // Track the total available balance
     let currentBalance = document.getElementById('currenTotalBalance').innerText; // Initial balance
     console.log(currentBalance);
@@ -251,67 +255,6 @@
       document.getElementById('congratulationsModal').classList.add('hidden');
     }
   </script>
-
-  <!-- <script>
-    const history = [];
-
-    // Show Donation Page
-    function showDonation() {
-      document.getElementById('donationSection').classList.remove('hidden');
-      document.getElementById('historySection').classList.add('hidden');
-    }
-
-    // Show History Page
-    function showHistory() {
-      const historySection = document.getElementById('historySection');
-      const historyList = document.getElementById('historyList');
-
-      // Clear previous history
-      historyList.innerHTML = '';
-
-      // Populate history
-      history.forEach((entry) => {
-        const listItem = document.createElement('li');
-        listItem.textContent = `${entry.date} - Cause: ${entry.cause}, Amount: ${entry.amount} BDT`;
-        historyList.appendChild(listItem);
-      });
-
-      // Hide donation section and show history section
-      document.getElementById('donationSection').classList.add('hidden');
-      historySection.classList.remove('hidden');
-    }
-
-    // Handle Donation and Add to History
-    function handleDonate(cause, totalId, inputId) {
-      const amountInput = document.getElementById(inputId);
-      const totalElement = document.getElementById(totalId);
-      const donationAmount = parseInt(amountInput.value);
-
-      if (donationAmount > 0) {
-        // Update total donation amount
-        const currentTotal = parseInt(totalElement.innerText);
-        totalElement.innerText = currentTotal + donationAmount;
-
-        // Add to transaction history with date and time
-        const date = new Date().toLocaleString();
-        history.push({ cause, amount: donationAmount, date });
-
-        // Show success popup
-        document.getElementById('congratulationsModal').classList.remove('hidden');
-
-        // Clear input
-        amountInput.value = '';
-      } else {
-        alert('Please enter a valid donation amount.');
-      }
-    }
-
-    // Close Success Popup
-    function closeModal() {
-            document.getElementById('congratulationsModal').classList.add('hidden');
-        }
-  </script> -->
-
 </body>
 
 </html>
