@@ -26,10 +26,6 @@
           fontFamily: {
             Lexend: "Lexend",
           },
-          backgroundImage: {
-            bgImage: "url('./image/bg.jpg')",
-
-          },
         },
       },
     };
@@ -57,44 +53,27 @@
       </nav>
     </div>
     <div class="mt-8 space-x-4 mb-6 max-w-max m-auto">
-      <!-- Button 1 -->
       <button id="donationBtn"
         class="font-bold border-2 border-solid border-gray-300 bg-common_color text-black py-2 px-4 rounded focus:outline-none transition duration-300"
         onclick="showDonation()">
         Donation
       </button>
-
-      <!-- Button 2 -->
       <button id="historyBtn"
         class="font-bold border-2 border-solid border-gray-300 text-black py-2 px-4 rounded focus:outline-none transition duration-300"
         onclick="showHistory()">
         History
       </button>
-
-
-
-      <!-- <button id="donationBtn" class="btn bg-green-500 text-white px-4 py-2 rounded-md"
-        onclick="showDonation()">Donation</button>
-      <button id="historyBtn" class="btn bg-blue-500 text-white px-4 py-2 rounded-md"
-        onclick="showHistory()">History</button> -->
     </div>
   </main>
-
-  <!-- Main Container -->
   <div class="max-w-5xl m-auto p-6">
-    <!-- Navigation -->
-
-    <!-- Donation Section -->
     <div id="donationSection" class="space-y-4 mt-52">
-      <!-- Donation Card 1 -->
       <div class="bg-white shadow-md rounded-lg  sm:flex gap-4 p-6 border-solid border-2 border-slate-200">
-        <img src="assets/noakhali.png" class="rounded-md object-contain h-auto sm:w-8/12" alt="">
+        <img src="assets/noakhali.png" class="rounded-md object-fill h-auto sm:max-w-sm" alt="">
         <div class="mt-6 sm:mt-0">
           <div class="flex bg-[#f3f3f3] p-2 w-32 mb-3 rounded-lg">
             <img src="assets/coin.png" alt="">
             <p class="text-gray-800 text-xl ml-1"> <span id="total1">120</span> BDT</p>
           </div>
-
           <h2 class="text-xl font-semibold mb-1">Donate for Flood at Noakhali, Bangladesh</h2>
           <p class="text-gray-600 text-sm mb-3"> The recent floods in Noakhali have caused significant damage to homes
             infrastructure. Your donation will help provide essential supplies and to those affected by
@@ -104,11 +83,10 @@
             <input type="number" id="donation1" class="w-full p-2 border rounded-md mb-2"
               placeholder="Enter donation amount">
             <button id="btn1" class="btn text-lg font-bold bg-common_color text-black px-4 py-2 mt-2 rounded-md size-full"
-              onclick="handleDonate('Noakhali', 'total1', 'donation1')">Donate Now</button>
+              onclick="handleDonate('is Donated for famine-2024 at Noakhali, Bangladesh', 'total1', 'donation1')">Donate Now</button>
           </div>
         </div>
       </div>
-      <!-- Donation Card 2 -->
       <div class="bg-white shadow-md rounded-lg  sm:flex gap-4 p-6 border-solid border-2 border-slate-200">
         <img src="assets/feni.png" class="rounded-md sm:w-96 object-cover" alt="">
         <div class="mt-6 sm:mt-0">
@@ -116,7 +94,6 @@
             <img src="assets/coin.png" alt="">
             <p class="text-gray-800 text-xl ml-1"> <span id="total2">50</span> BDT</p>
           </div>
-
           <h2 class="text-xl font-semibold mb-4">Donate for Flood Relief in Feni,Bangladesh</h2>
           <p class="text-gray-600 text-sm mb-7"> The recent floods in Feni have devastated local communities, leading to
             severe
@@ -127,11 +104,10 @@
             <input type="number" id="donation2" class="w-full p-2 border rounded-md mb-4"
               placeholder="Enter donation amount">
             <button id="btn2" class="btn text-lg font-bold bg-common_color text-black px-4 py-2 mt-2 rounded-md size-full"
-              onclick="handleDonate('Feni', 'total2', 'donation2')">Donate Now</button>
+              onclick="handleDonate('is Donated for famine-2024 at Feni, Bangladesh', 'total2', 'donation2')">Donate Now</button>
           </div>
         </div>
       </div>
-      <!-- Donation Card 3 -->
       <div class="bg-white shadow-md rounded-lg  sm:flex gap-4 p-6 border-solid border-2 border-slate-200">
         <img src="assets/quota-protest.png" class="rounded-md  sm:w-96 object-cover" alt="">
         <div class="mt-6 sm:mt-0">
@@ -139,7 +115,6 @@
             <img src="assets/coin.png" alt="">
             <p class="text-gray-800 text-xl ml-1"> <span id="total3">650</span> BDT</p>
           </div>
-
           <h2 class="text-xl font-semibold mb-2">Aid for Injured in the Quota Movement</h2>
           <p class="text-gray-600 text-sm mb-6 "> The recent Quota movement has resulted in numerous injuries
             and significant hardship for many individuals. Your support is crucial in providing medical assistance,
@@ -151,18 +126,15 @@
             <input type="number" id="donation3" class="w-full p-2 border rounded-md mb-4"
               placeholder="Enter donation amount">
             <button id="btn3" class="btn text-lg font-bold bg-common_color text-black px-4 py-2 mt-2 rounded-md size-full"
-              onclick="handleDonate('Quota Movement', 'total3', 'donation3')">Donate Now</button>
+              onclick="handleDonate('is Donated for famine-2024 at Quota, Bangladesh', 'total3', 'donation3')">Donate Now</button>
           </div>
         </div>
       </div>
     </div>
-
-    <!-- History Section -->
-    <div id="historySection" class="hidden mt-52">
+    <div id="historySection" class="hidden mt-52 ">
       <h2 class="text-xl font-semibold mb-4">Transaction History</h2>
-      <ul id="historyList" class="list-disc pl-6"></ul>
+      <h2 id="historyList" class="list-disc pl-6 border-2 border-solid-gray rounded-lg p-4"></h2>
     </div>
-
     <div id="congratulationsModal"class="hidden fixed inset-0 bg-gray-900 bg-opacity-75 flex justify-center items-center">
       <div class="bg-white p-4 rounded-3xl shadow-lg justify-center text-center w-[400px] h-[300px]">
         <h2 class="text-3xl font-bold text-black mt-6">Congratulations!</h2><br>
@@ -173,84 +145,53 @@
       </div>
     </div>
   </div>
-  <footer class="bg-[#f9f7f3] h-32 pt-[24px]">
-
-  </footer>
-  <!-- <script src="currentBalance.js"></script> -->
+  <h1 class="bg-[#f9f7f3] h-32 pt-[24px] mt-10"><h1>
   <script src="forBtn.js"></script>
   <script>
     const navbar = document.getElementById('navbar');
-// Add scroll event listener
-    // Track the total available balance
-    let currentBalance = document.getElementById('currenTotalBalance').innerText; // Initial balance
+    let currentBalance = document.getElementById('currenTotalBalance').innerText;
     console.log(currentBalance);
 
     const history = [];
-
-    // Show Donation Page
+  
     function showDonation() {
       document.getElementById('donationSection').classList.remove('hidden');
       document.getElementById('historySection').classList.add('hidden');
     }
-
-    // Show History Page
     function showHistory() {
       const historySection = document.getElementById('historySection');
       const historyList = document.getElementById('historyList');
-
-      // Clear previous history
       historyList.innerHTML = '';
-
-      // Populate history
       for (const entry of history) {
-        const listItem = document.createElement('li');
-        listItem.textContent = `${entry.date} - Cause: ${entry.cause}, Amount: ${entry.amount} BDT`;
+        const listItem = document.createElement('h2');
+        listItem.innerText = `${entry.amount} Taka, ${entry.cause},  \n Date: ${entry.date}`;
         historyList.appendChild(listItem);
       }
-
-      // Hide donation section and show history section
       document.getElementById('donationSection').classList.add('hidden');
       historySection.classList.remove('hidden');
     }
-
-    // Handle Donation and Add to History
     function handleDonate(cause, totalId, inputId) {
       const amountInput = document.getElementById(inputId);
       const totalElement = document.getElementById(totalId);
       const donationAmount = parseInt(amountInput.value);
 
       if (donationAmount > 0) {
-        // Check if donation is possible with the current balance
         if (donationAmount > currentBalance) {
           alert("Insufficient balance to make this donation.");
           return;
         }
-
-        // Update total donation amount
         const currentTotal = parseInt(totalElement.innerText);
         totalElement.innerText = currentTotal + donationAmount;
-
-        // Subtract the donation amount from current balance
         currentBalance -= donationAmount;
-
-        // Update the balance display
-        document.getElementById('currenTotalBalance').innerText = `${currentBalance} BDT`;
-
-        // Add to transaction history with date and time
+        document.getElementById('currenTotalBalance').innerText = `${currentBalance}`;
         const date = new Date().toLocaleString();
         history.push({ cause, amount: donationAmount, date });
-
-        // Show success popup
         document.getElementById('congratulationsModal').classList.remove('hidden');
-
-        // Clear input
         amountInput.value = '';
       } else {
         alert('Please enter a valid donation amount.');
       }
     }
-
-    // Close Success Popup
     function closeModal() {
       document.getElementById('congratulationsModal').classList.add('hidden');
     }
